@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+restaurants = {name: 'Quintal do espeto 2', address: 'vila madalena', category: 'japanese' }
+
+restaurant = Restaurant.create!(restaurants)
+restaurant = Restaurant.create!(restaurants)
+restaurant = Restaurant.create!(restaurants)
+restaurant = Restaurant.create!(restaurants)
+restaurant = Restaurant.create!(restaurants)
+
+puts "eu cheguei"

@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @restaurant %>
+
+<div>
+  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) , class: "btn btn-primary mx-2"%> |
+  <%= link_to "Back to restaurants", restaurants_path , class: "btn btn-primary mx-2"%>
+
+  <%= button_to "Destroy this restaurant", @restaurant, method: :delete , class: "btn btn-danger my-4 mx-2"%>
+
+  <h1>Reviews:</h1>
+   <%= link_to 'Add new Review', new_restaurant_review_path(@restaurant) , class: "btn btn-primary m-2" %>
+  <ul class="list-group  m-2">
+    <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item border border-dark my-2">
+      Content: <strong> <%= review.content %> </strong> <br>
+      Rating: <strong> <%= review.rating %> </strong>
+    </li>
+    <% end %>
+  </ul>
+</div>
